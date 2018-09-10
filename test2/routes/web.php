@@ -15,6 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+// Route::get('/profile', function () {
+//     $help = (object)[
+//         'name' => "Hoi",
+//         'keys' => "MyKey",
+//         'interests' => [ 
+//             'Music',
+//             'Movies',
+//             'Heeeey meid'
+//         ]
+//     ];
+    
+//     return view('profile')
+//         ->with('help', $help);
+// });
+Route::get('/profile', 'ProfileController@show');
+
+Route::get('/index', 'ProfileController@index');

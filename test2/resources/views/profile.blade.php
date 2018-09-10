@@ -12,6 +12,10 @@
 
         <!-- Styles -->
         <style>
+
+        .container {
+            width: 30%;
+        }
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -62,6 +66,11 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            p {
+                font-weight: 600;
+                text-align: justify;
+            }
         </style>
     </head>
     <body>
@@ -77,17 +86,19 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content container">
                 <div class="title m-b-md">
-                    Profile
+                    <h2>{{ $help }}</h2>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <h4>About me</h4><br>
+                    <h4>{{ $desc }}</h4><br>
+                    <h4>Interests</h4><br>
+                    <h4>{{ $help->interests[0] }}</h4><br>
+                    <h4>{{ $help->interests[1] }}</h4><br>
+                    <h4>{{ $help->interests[2] }}</h4><br>
+
                 </div>
             </div>
         </div>
